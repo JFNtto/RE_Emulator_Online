@@ -1,0 +1,26 @@
+@import "tailwindcss";
+/* input.css;     comando para iniciar npx @tailwindcss/cli -i ./src/css/input.css -o ./src/css/output.css --watch  */ 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body{
+    background-image: url(../imagens/fundo.jpg);
+    background-size: cover;        /* cobre a tela inteira */
+    background-position: center;   /* centralizada */
+    background-repeat: no-repeat;  /* sem repetição */
+    background-attachment: fixed;  /* efeito parallax simples (opcional) */
+    position: relative;            /* cria contexto para o overlay */
+    color: #fff;
+}
+
+  .neon-border {
+    border: 2px solid #fff; /* cor base da borda */
+    box-shadow:
+      0 0 5px #fff,
+      0 0 0px #fff,
+      0 0 0px #fff,
+      0 0 0px #fff;
+  }

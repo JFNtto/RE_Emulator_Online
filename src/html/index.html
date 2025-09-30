@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../css/output.css" rel="stylesheet">
+  <link href="../css/output.css" rel="stylesheet">
+
+  <script src="../scripts/cardDisco.js"></script>
+</head>
+<body>
+  <div class="bg-gradient-to-b from-white via-red-600 to-red-950 h-auto"><h1 class="text-white text-center font-extrabold font-mono text-4xl">Jogue os jogos clássicos desta franquia</h1></div>
+  
+  <div class="h-auto font-bold text-center bg-black/70 backdrop-blur-lg">
+    <h2>Abaixo você encontrar os 3 jogos que deram origem a tudo</h2>
+    <p>Escolha qual você quer jogar e aperte no botão para começar a jogar</p>
+  </div>
+
+  <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full justify-items-center items-stretch p-8 h-auto">
+    
+    <div class="flex flex-col bg-black/50 backdrop-blur-lg max-w-sm h-full justify-between items-center rounded-xl shadow-lg p-4 border neon-border">
+      <img src="../imagens/re3capa.jpg" alt="capa do jogo" class="rounded-xl max-w-full h-70 object-cover">
+      <p class="mt-9 mb-9 font-bold ">Resident Evil 3: Nemesis acompanha Jill Valentine em sua fuga desesperada de Raccoon City, infestada por zumbis e criaturas criadas pela Umbrella Corporation. O jogo é marcado pela presença constante do temido Nemesis, inimigo implacável que persegue a protagonista.</p>
+      
+      <form action="/residentEvil3" method="get">
+        <button class="cursor-pointer bg-red-600 rounded-lg text-white text-2xl p-3 hover:bg-white hover:text-black transition duration-500 font-extrabold">Clique aqui para jogar agora</button>
+      </form>
+    </div>
+
+    <div class="flex flex-col bg-black/50 backdrop-blur-lg max-w-sm h-full justify-between items-center rounded-xl shadow-lg p-4 border neon-border">
+      <img src="../imagens/re2capa.jpg" alt="capa do jogo" class="rounded-xl max-w-full h-70 object-cover">
+      <p class="mt-9 mb-9 font-bold ">Resident Evil 2 coloca os jogadores no controle de Leon S. Kennedy e Claire Redfield, presos em uma Raccoon City devastada por um surto zumbi. Com duas campanhas interligadas, ambientes mais amplos e narrativa envolvente.</p>
+      
+
+        <button type="button" onclick="abrirCard()" class="cursor-pointer bg-red-600 rounded-lg text-white text-2xl p-3 hover:bg-white hover:text-black transition duration-500 font-extrabold">Clique aqui para jogar agora</button>
+    </div>
+
+    <div class="flex flex-col bg-black/50 backdrop-blur-lg max-w-sm h-full justify-between items-center rounded-xl shadow-lg p-4 border neon-border">
+      <img src="../imagens/re1capa.jpg" alt="capa do jogo" class="rounded-xl max-w-full h-70 object-cover">
+      <p class="mt-9 mb-9 font-bold ">Resident Evil é o marco inicial da franquia, trazendo Jill Valentine e Chris Redfield investigando desaparecimentos nas montanhas Arklay. Presos em uma mansão cheia de perigos e segredos da Umbrella Corporation, os protagonistas enfrentam zumbis.</p>
+      
+      <form action="/residentEvil" method="get">
+        <button class="cursor-pointer bg-red-600 rounded-lg text-white text-2xl p-3 hover:bg-white hover:text-black transition duration-500 font-extrabold">Clique aqui para jogar agora</button>
+      </form>
+    </div>
+  </section>
+
+<div id="cardDisco" class="fixed inset-0 bg-black/60 backdrop-blur-sm flex justify-center items-center hidden z-50">
+  <div class="bg-black rounded-xl shadow-xl p-6 w-96">
+    <h2 class="text-2xl font-bold mb-4 text-center">Escolha o Disco</h2>
+    
+    <form id="formDisco" method="get">
+      <label for="disco" class="block mb-2 font-semibold">Selecione:</label>
+      <select id="disco" name="disco" class="w-full border rounded-lg p-2 mb-4">
+        <option value="1">Disco 1</option>
+        <option value="2">Disco 2</option>
+      </select>
+
+      <div class="flex justify-between">
+        <button type="button" onclick="fecharCard()" 
+          class="bg-gray-400 text-black px-4 py-2 rounded-lg hover:bg-gray-500">
+          Cancelar
+        </button>
+        <button type="submit" 
+          class="bg-red-600 text-black px-4 py-2 rounded-lg hover:bg-red-700">
+          Jogar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>
