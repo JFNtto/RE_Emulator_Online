@@ -12,7 +12,7 @@ app.get('/', (req, res)=>{
 //resident evil 3
 
 app.get('/residentEvil3', (req, res)=>{
-    res.sendFile(path.join(__dirname, 'src/html/jogarRE3.html'))
+    res.sendFile(path.join(__dirname, 'src/html/novaTelaRe3.html'))
 })
 
 //resident evil 2
@@ -26,17 +26,17 @@ app.get('/residentEvil2', (req, res)=>{
 })
 
 app.get("/residentEvil2/disco_1", (req, res) => {
-  res.sendFile(path.join(__dirname, 'src/html/jogarRE2D1.html'))
+  res.sendFile(path.join(__dirname, 'src/html/novaTelaRe2D1.html'))
 });
 
 app.get("/residentEvil2/disco_2", (req, res) => {
-  res.sendFile(path.join(__dirname, 'src/html/jogarRE2D2.html'))
+  res.sendFile(path.join(__dirname, 'src/html/novaTelaRe2D2.html'))
 });
 
 //resident evil 1
 
 app.get('/residentEvil', (req, res)=>{
-    res.sendFile(path.join(__dirname, 'src/html/jogarRE.html'))
+    res.sendFile(path.join(__dirname, 'src/html/novaTelaRe1.html'))
 })
 
 const PORT = process.env.PORT || 8080;

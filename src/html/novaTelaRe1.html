@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogando - Resident evil</title>
+    <link href="../css/output.css" rel="stylesheet">
+    </head>
+<body class="bg-black text-white">
+
+    <div class="fixed inset-0 -z-10">
+        <div 
+            class="absolute inset-0 bg-no-repeat bg-cover bg-center" 
+            style="background-image: url('../imagens/personagens/R1.jpg');">
+        </div>
+        <div class="absolute inset-0 bg-black/40"></div>
+    </div>
+
+    <header class="py-4 px-6 bg-black/70 border-white border-b-2 relative z-10">
+
+            <nav>
+                <a href="/" class="text-lg text-gray-300 hover:text-white transition-colors duration-300">&larr; Voltar para a página inicial</a>
+            </nav>
+
+    </header>
+
+    <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <main>
+            <section class="flex flex-col lg:flex-row justify-center items-center my-8 gap-4">
+                
+                <div class="hidden lg:flex w-full lg:w-1/5 justify-center">
+                    <img src="../imagens/personagens/re1Jill.png" alt="Jill Valentine Clássica" class="max-h-80 object-contain">
+                </div>
+
+                <div class="w-full lg:w-3/5 aspect-video">
+                    <div id="game" class="w-full h-full"></div>
+                </div>
+
+                <div class="hidden lg:flex w-full lg:w-1/5 justify-center">
+                    <img src="../imagens/personagens/re1Chris.png" alt="Carlos Oliveira" class="max-h-80 object-contain">
+                </div>
+            </section>
+
+            <section class="bg-black/60 backdrop-blur-sm p-4 sm:p-6 rounded-lg border neon-border">
+                 <div class="flex flex-col md:flex-row gap-6">
+                    <div class="flex flex-col gap-4 w-full md:w-1/4">
+                        <button id="btn-controles" class="cursor-pointer w-full text-left bg-red-600 text-white hover:bg-white hover:text-black font-extrabold py-3 px-4 rounded transition-colors duration-300">
+                            Controles
+                        </button>
+                        <button id="btn-salvar" class="cursor-pointer w-full text-left bg-red-600 text-white hover:bg-white hover:text-black font-extrabold  py-3 px-4 rounded transition-colors duration-300">
+                            Como salvar
+                        </button>
+                        <button id="btn-outros" class="cursor-pointer w-full text-left bg-red-600 text-white hover:bg-white hover:text-black font-extrabold  py-3 px-4 rounded transition-colors duration-300">
+                            Outros
+                        </button>
+                    </div>
+
+                    <div id="description-area" class="w-full md:w-3/4 p-4 min-h-[150px]">
+
+                        <div id="desc-controles" class="description-content hidden">
+                            <h3 class="text-xl font-bold mb-2">Controles do Jogo</h3>
+                            <p>Use as setas direcionais para mover o personagem. A tecla 'X' serve para atirar/confirmar, 'Z' para correr, e 'Enter' para abrir o inventário. Você pode configurar os controles nas opções do emulador.</p>
+                        </div>
+
+                        <div id="desc-salvar" class="description-content hidden">
+                            <h3 class="text-xl font-bold mb-2">Como Salvar seu Progresso</h3>
+                            <p>Para salvar o jogo, você precisa encontrar uma máquina de escrever (typewriter) e usar um "Ink Ribbon". Cada Ink Ribbon permite salvar o jogo uma vez. Use-os com sabedoria!</p>
+                        </div>
+
+                        <div id="desc-outros" class="description-content hidden">
+                             <h3 class="text-xl font-bold mb-2">Outras Informações</h3>
+                            <p>Este jogo contém cenas de violência e é recomendado para maiores de 18 anos. Explore a mansão com cuidado, gerencie seus recursos e tente sobreviver aos horrores que te aguardam.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mt-8 mb-12 bg-black/60 backdrop-blur-sm p-4 sm:p-6 rounded-lg border neon-border">
+                <h2 class="text-2xl font-bold mb-4">Sobre o Jogo</h2>
+                <p class="text-gray-300 leading-relaxed">
+                    Lançado originalmente em 1996 para PlayStation, Resident Evil marcou a história dos videogames ao consolidar o gênero survival horror. O enredo se passa em julho de 1998, quando a equipe de elite S.T.A.R.S. (Special Tactics and Rescue Service) é enviada para investigar uma série de assassinatos brutais nas Montanhas Arklay, próximas a Raccoon City.
+                    Durante a missão, os protagonistas Chris Redfield e Jill Valentine, acompanhados por outros membros da equipe, acabam se refugiando em uma mansão isolada após serem atacados por criaturas grotescas. O que parecia apenas um abrigo logo se revela um pesadelo: a mansão é um laboratório secreto da Umbrella Corporation, onde experimentos com o T-vírus deram origem a zumbis e armas biológicas mortais.
+                    O jogo se destacou por sua atmosfera claustrofóbica, câmeras fixas que aumentavam a tensão, e a necessidade de gerenciar recursos limitados como munição e itens de cura. Além disso, trouxe múltiplos finais, dependendo das escolhas do jogador e de qual personagem foi selecionado no início da campanha.
+                    Combinando exploração, quebra-cabeças e combate estratégico, Resident Evil não apenas inaugurou uma das franquias mais famosas dos games, mas também definiu os elementos que se tornariam referência no gênero de terror eletrônico. Até hoje, é lembrado como um marco cultural e um divisor de águas na forma como os jogos podem transmitir suspense e medo.
+                </p>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        const buttons = [
+            document.getElementById('btn-controles'),
+            document.getElementById('btn-salvar'),
+            document.getElementById('btn-outros')
+        ];
+        const descriptions = [
+            document.getElementById('desc-controles'),
+            document.getElementById('desc-salvar'),
+            document.getElementById('desc-outros')
+        ];
+
+        buttons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                descriptions.forEach(desc => desc.classList.add('hidden'));
+                if (descriptions[index]) {
+                    descriptions[index].classList.remove('hidden');
+                }
+            });
+        });
+    </script>
+        <script>
+            EJS_player = "#game";
+            EJS_core = "psx";
+            EJS_color = "#cc0000";
+            EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
+            EJS_biosUrl = 'https://re-emulator-online.netlify.app/re.bin';// /roms/re.bin
+            EJS_gameUrl = "https://re-emulator-online.netlify.app//resident evil (usa).cue";// /roms/Resident Evil (USA).cue
+        </script>
+        <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+</body>
+</html>
